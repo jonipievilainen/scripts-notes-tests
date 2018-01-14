@@ -1,0 +1,15 @@
+sudo apt-get update
+sudo apt-get install omxplayer openvpn git
+create <file>.ovpn conf file
+wget <file>.ovpn file to ads-tv
+sudo cp <file>.ovpn /etc/openvpn/<file>.conf
+sudo cp <file>.ovpn /etc/openvpn/client/<file>.conf
+sudo nano /etc/default/openvpn
+uncomment AUTOSTART="all"
+git clone "https://github.com/jonipievilainen/shellscriptAdsDIsplayer.git"
+cd shellscriptAdsDIsplayer
+sh app.sh
+crontab -e
+@reboot sleep 80 && sh /home/pi/shellscriptAdsDIsplayer/app.sh
+sudo nano /boot/cmdline.txt
+add consoleblank=1
