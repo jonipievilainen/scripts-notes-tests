@@ -59,7 +59,7 @@ void setup() {
   pinMode(led3, OUTPUT);
   pinMode(led4, OUTPUT);
   
-  WiFi.begin("Tech_D0049668", "DDKKMPUV"); //Connect to the WiFi network
+  WiFi.begin("Fast", "demopwd123"); //Connect to the WiFi network
   
   while (WiFi.status() != WL_CONNECTED) { //Wait for connection
     
