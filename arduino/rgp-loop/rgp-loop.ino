@@ -21,6 +21,8 @@ void setup() {
 }
 
 void loop() {
+
+  Serial.print("qasdsa");
   changeColor(led1, 0, 223);
   changeColor(led2, 0, 244);
   changeColor(led3, 0, 66);
@@ -29,6 +31,7 @@ void loop() {
   changeColor(led2, 244, 10);
   changeColor(led3, 66, 0);
 
+delay(5000);
   changeColor(led1, 100, 0);
   changeColor(led2, 10, 0);
   changeColor(led3, 0, 0);
