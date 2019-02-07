@@ -1,0 +1,29 @@
+{
+    "window.title": "${activeEditorLong}${separator}${rootName}",
+    "php.validate.executablePath": "/php/7210/php.exe",
+    "php.executablePath": "/php/7210/php.exe",
+    "files.autoSave": "off",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+        "sshextension.serverList": [
+            {
+                "name": "Docker",
+                "host": "localhost",
+                "port": 22,
+                "username": "root",
+                "path": "/",
+                "sshextension.allowMultipleConnections": true
+            },
+            {
+                "name": "Live_server",
+                "host": "live.servu.fi",
+                "port": 22,
+                "username": "root",
+                "path": "/",
+                "sshextension.allowMultipleConnections": true
+            }
+        ],
+        "workbench.startupEditor": "newUntitledFile",
+        "workbench.statusBar.feedback.visible": false,
+        "editor.autoIndent": false,
+        "editor.tabCompletion": "onlySnippets"
+    }
