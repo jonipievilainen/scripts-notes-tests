@@ -9,6 +9,14 @@ const int LCD_ROWS = 2;
 
 void setup()
 {
+  /*
+   * USE ONLY USB POWER
+   * 
+   * I2C GND - NodeMCU GND
+   * I2C Vcc - NodeMCU VU
+   * I2C SDA - NodeMCU D3
+   * I2C SDL - NodeMCU D4
+  */
   Wire.begin(0,2);
 int status;
 	status = lcd.begin(LCD_COLS, LCD_ROWS);
