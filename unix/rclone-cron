@@ -1,0 +1,1 @@
+15 3 * * * rclone copy /mnt/tera/ teralevy:/tera_1/ -v --log-file $HOME/rclone.log
