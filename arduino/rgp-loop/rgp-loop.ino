@@ -1,14 +1,14 @@
-const int led1 = 12; //b
-const int led2 = 13; //r
-const int led3 = 15; //g
+const int led1 = 10; //b
+const int led2 = 6; //r
+const int led3 = 3; //g
 const int led4 = 14; //w
 
 int b = 0;
 int r = 0;
 int g = 0;
 
-int ls = 50;
-int steps = 5;
+int ls = 80;
+int steps = 1;
 
 void setup() {
   // put your setup code here, to run once:
@@ -22,19 +22,22 @@ void setup() {
 
 void loop() {
 
-  Serial.print("qasdsa");
-  changeColor(led1, 0, 223);
-  changeColor(led2, 0, 244);
-  changeColor(led3, 0, 66);
+  // Serial.print("11111/\r");
+  changeColor(led1, 20, 223);
+  changeColor(led2, 20, 100);
+  changeColor(led3, 20, 66);
 
+  Serial.print("22222\r");
   changeColor(led1, 223, 100);
-  changeColor(led2, 244, 10);
-  changeColor(led3, 66, 0);
+  Serial.print("333333\r");
+  changeColor(led2, 100, 10);
+  Serial.print("44444\r");
+  changeColor(led3, 66, 254);
 
-delay(5000);
+  // Serial.print("3333\r");
   changeColor(led1, 100, 0);
   changeColor(led2, 10, 0);
-  changeColor(led3, 0, 0);
+  changeColor(led3, 254, 0);
 }
 
 bool changeColor(int led, int x, int xNext){
