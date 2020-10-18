@@ -7,8 +7,18 @@ int b = 0;
 int r = 0;
 int g = 0;
 
-int ls = 80;
+int ls = 100;
 int steps = 1;
+
+//int l = random(1, 255);
+//int ll = random(1, 255);
+//int lll = random(1, 255);
+//int llll = random(1, 255);
+
+int l = random(1, 100);
+int ll = random(1, 100);
+int lll = random(1, 100);
+int llll = random(1, 100);
 
 void setup() {
   // put your setup code here, to run once:
@@ -22,22 +32,25 @@ void setup() {
 
 void loop() {
 
+//  int j = random(1, 255);
+//  int jj = random(1, 255);
+//  int jjj = random(1, 255);
+//  int jjjj = random(1, 255);
+
+  int j = random(1, 100);
+  int jj = random(1, 100);
+  int jjj = random(1, 100);
+  int jjjj = random(1, 100);
+
   // Serial.print("11111/\r");
-  changeColor(led1, 20, 223);
-  changeColor(led2, 20, 100);
-  changeColor(led3, 20, 66);
+  changeColor(led1, l, j);
+  changeColor(led2, ll, jj);
+  changeColor(led3, lll, jjj);
 
-  Serial.print("22222\r");
-  changeColor(led1, 223, 100);
-  Serial.print("333333\r");
-  changeColor(led2, 100, 10);
-  Serial.print("44444\r");
-  changeColor(led3, 66, 254);
-
-  // Serial.print("3333\r");
-  changeColor(led1, 100, 0);
-  changeColor(led2, 10, 0);
-  changeColor(led3, 254, 0);
+  l = j;
+  ll = jj;
+  lll = jjj;
+  llll = jjjj;
 }
 
 bool changeColor(int led, int x, int xNext){
