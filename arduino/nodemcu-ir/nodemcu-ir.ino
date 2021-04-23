@@ -71,7 +71,7 @@ void sonyRemote() {
   irsend.sendSony(button, 15, repeats);  // 12 bits & 2 repeats
   delay(2000);
 
-  server.send(200, "text/plain", "sonyRemote: OK");
+  server.send(200, "text/html", "<style> a.button { border: solid 1px; padding: 1em; display: block; } </style> <table> <tr> <td><a href='/sonyRemote?button=21004&repeats=2' class='button'>SA-CD/CD</a></td> <td><a href='/sonyRemote?button=8716&repeats=2' class='button'>Video 1</a></td> </tr> <tr> <td><a href='/sonyRemote?button=25612&repeats=255' class='button'>Volume -74</a></td> <td><a href='/sonyRemote?button=25612&repeats=255' class='button'>Volume -74</a></td> </tr> <tr> <td><a href='/sonyRemote?button=25612&repeats=143' class='button'>Volume -40</a></td> <td><a href='/sonyRemote?button=9228&repeats=143' class='button'>Volume +40</a></td> </tr> <tr> <td><a href='/sonyRemote?button=25612&repeats=15' class='button'>Volume -1</a></td> <td><a href='/sonyRemote?button=9228&repeats=15' class='button'>Volume +1</a></td> </tr> <tr> <td><a href='/sonyRemote?button=25612&repeats=25' class='button'>Volume -4</a></td> <td><a href='/sonyRemote?button=9228&repeats=25' class='button'>Volume +4</a></td> </tr> <tr> <td><a href='/sonyRemote?button=25612&repeats=42' class='button'>Volume -10</a></td> <td><a href='/sonyRemote?button=9228&repeats=42' class='button'>Volume +10</a></td> </tr> </table>");
 }
 
 void setup() {
@@ -92,7 +92,7 @@ void setup() {
   Serial.println(WiFi.localIP());
   server.on("/samsungOnOff", samsungOnOff);
   server.on("/sonyOnOff", sonyOnOff);
-  server.on("/sonyVolumeUp", sonyRemote);
+  server.on("/sonyRemote", sonyRemote);
 
   server.begin();
   Serial.println("Server listening");
