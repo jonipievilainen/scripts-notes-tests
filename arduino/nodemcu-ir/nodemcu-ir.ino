@@ -53,6 +53,27 @@ void sonyOnOff() {
   server.send(200, "text/plain", "sonyOnOff: OK");
 }
 
+void sonyRemote() {
+  int button = 21516; // default button on/off
+  int repeats = 2;    // 15 = 1 irl volume
+
+  if (server.arg("button") != "") {
+    button = server.arg("button").toInt();
+  }
+  
+  if (server.arg("repeats") != "") {
+    repeats = server.arg("repeats").toInt();
+  }
+
+  Serial.println("Sony");
+  Serial.println(repeats);
+  
+  irsend.sendSony(button, 15, repeats);  // 12 bits & 2 repeats
+  delay(2000);
+
+  server.send(200, "text/plain", "sonyRemote: OK");
+}
+
 void setup() {
   irsend.begin();
 #if ESP8266
@@ -71,6 +92,7 @@ void setup() {
   Serial.println(WiFi.localIP());
   server.on("/samsungOnOff", samsungOnOff);
   server.on("/sonyOnOff", sonyOnOff);
+  server.on("/sonyVolumeUp", sonyRemote);
 
   server.begin();
   Serial.println("Server listening");
