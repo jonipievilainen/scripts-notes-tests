@@ -1,0 +1,7 @@
+1. Add "Support blocker (E)"
+2. Scale blocker
+3. Per Model Settings -> Modify settings for overlaps -> Cutting mesh
+- Wall Thickness 0.0
+- Top/Bottom Thickness 0.0
+- Infill Density 0.0
+- Generate Support []
