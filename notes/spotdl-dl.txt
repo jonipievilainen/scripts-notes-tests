@@ -1,0 +1,1 @@
+spotdl --bitrate "320k" --output "{artist}/{album}/{title}.{output-ext}" "https://open.spotify.com/album/7iOPxPm0nJsc5lHX3fBg6F?si=S6hodV9VTleuzjqIyloYmw"
