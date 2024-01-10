@@ -4,3 +4,5 @@ youtube-dl --download-archive downloaded.txt --no-post-overwrites -ciwx --audio-
 #Windows
 1. Download ffmpeg 
 .\youtube-dl.exe --ffmpeg-location "ffmpeg/bin" --download-archive downloaded.txt --no-post-overwrites -ciwx --audio-format mp3 -o "%(title)s.%(ext)s" --add-metadata https://www.youtube.com/playlist?list=PL-HyxKmC6_CBXYJ7YxT-Rexw0cNklgaL9
+
+yt-dlp --download-archive downloaded.txt --no-post-overwrites -ciwx --audio-format mp3 --audio-quality "320K" -o "%(title)s.%(ext)s" --add-metadata https://www.youtube.com/playlist?list=PL0VDFh5GYnh6nsZJ_9Y-lum830lgdwMGb
