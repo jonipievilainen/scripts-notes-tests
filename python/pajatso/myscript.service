@@ -1,0 +1,10 @@
+[Unit]
+Description=My Python Script
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /home/pi/pi-gpio-butons.py
+
+[Install]
+WantedBy=multi-user.target

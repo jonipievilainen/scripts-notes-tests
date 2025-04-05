@@ -1,0 +1,40 @@
+ 1  ls
+    2  ifconfig
+    3  lsusb
+    4  ls
+    5  lsusb
+    6  sudo shutdown -h noww
+    7  sudo shutdown -h now
+    8  ls
+    9  pinentry
+   10  man pinentry
+   11  pinentry 17
+   12  raspi-config
+   13  sudo raspi-config
+   14  gpio
+   15  sudo su
+   16  sudo apt-get install rpi.gpio
+   17  raspi/gpio
+   18  raspi-gpio
+   19  sudo apt-get install rpi-gpio
+   20  sudo apt-get install raspi-gpio
+   21  raspi-gpio  get
+   22  raspi-gpio  get 25
+   23  raspi-gpio  get
+   24  raspi-gpio  get 25
+   25  raspi-gpio  get 24
+   26  sudo shutdown -h now
+   27  python pi-gpio-butons.py
+   28  sudo nano myscript.service
+   29  sudo mv myscript.service /etc/systemd/system/
+   30  sudo chmod 644 /etc/systemd/system/myscript.service
+   31  sudo systemctl enable myscript.service
+   32  sudo reboot
+   33  sudo journalctl -u myscript.service
+   34  sudo nano /etc/systemd/system/myscript.service
+   35  /usr/bin/python pi-gpio-butons.py
+   36  sudo reboot
+   37  sudo journalctl -u myscript.service
+   38  sudo nano /etc/systemd/system/myscript.service
+   39  sudo systemctl status myscript.service
+   40  sudo reboot
